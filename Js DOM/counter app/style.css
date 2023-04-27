@@ -1,0 +1,74 @@
+/* imports */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* Global styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+}
+
+body,
+.app-box,
+.output-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(to right, #7a7aff, #fffd79);
+}
+
+.btn {
+  background-color: #181c34;
+  color: #fff;
+  border: none;
+  padding: 0.2rem 0.5rem;
+  width: 80px;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 100ms linear;
+  font-size: 1.1rem;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* main app styles */
+
+.app-box {
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 0 3px #000;
+  border-radius: 10px;
+  height: 300px;
+  flex-direction: column;
+}
+
+.output-box {
+  box-shadow: 0 0 8px #ff5454;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 2rem;
+  width: 50%;
+  height: 50%;
+  background-color: #181c34;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.action-btns {
+  margin: 0.5rem 0;
+}
