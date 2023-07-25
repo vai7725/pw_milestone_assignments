@@ -63,6 +63,12 @@ event.on('unsubscribe');
 event.emit('ubsubscribe'); // IF WE REMOVE THE HANDLER IT WILL THROW AN ERROR `The "listener" argument must be of type function. Received undefined`
 
 // Task - 10 -------------------------------------------------------
-console.log('max listeners', event.getMaxListeners());
+console.log(
+  'The default maximum number of event listeners are: ',
+  event.getMaxListeners()
+);
 event.setMaxListeners(5);
-console.log('max listeners after change', event.getMaxListeners());
+console.log(
+  'The updated maximum number of event listeners are',
+  event.getMaxListeners()
+);
