@@ -8,8 +8,9 @@ When user creates an account, app checks if user already exists with the email o
 
 ## Endpoints
 
-/api/register - User can create account at this endpoint by providing `email` and `password`.
-/api/login - User can log into the account he/she has created by providing credentials (email and password).
+- **/api/register** - User can create account at this endpoint by providing `email` and `password`.
+
+- **/api/login** - User can log into the account he/she has created by providing credentials (email and password).
 
 **Description:** This endpoint allows users to create an account using their email and password.
 
