@@ -1,53 +1,48 @@
-# Backend Application Documentation
+# Auth with Express assignment Documentation
 
-Welcome to the documentation for our backend CRUD application! This document provides information on how to use the API endpoints, create an account, and authenticate users using JSON Web Tokens (JWT).
-
-## Authentication
-
-When user creates an account, app checks if user already exists with the email or not. On loggin in, it returns the token corresponding to the credentials.
+Welcome to my 'Auth with Express' assignment. I've built a dummy instagram login system using HTML, CSS, JS, Node.js, Express.js with MongoDB.
 
 ## Endpoints
 
-- **/api/register** - User can create account at this endpoint by providing `email` and `password`.
+- **/register** - User can create account at this endpoint by providing `email`, `password`, `username` and `bio`.
 
-- **/api/login** - User can log into the account he/she has created by providing credentials (email and password).
+- **/login** - User can log into the account he/she has created by providing credentials (email and password).
 
-**Description:** This endpoint allows users to create an account using their email and password.
+- **/** - User will be redirected to the following endpoint, to see the profile detail after logging in.
 
 **Request Body while creating an account:**
 
-``````json
+```json
 {
   "email": "user@example.com",
-  "password": "yourpassword"
+  "password": "yourpassword",
+  "username": "user",
+  "bio": "Bio"
 }
-
+```
 
 **Response when account is created:**
 
-````json
+```json
 {
+  "success": true,
   "msg": "User registered successfully"
 }
-
+```
 
 **Request Body while loggin into the account:**
 
-`````json
+```json
 {
-  "email": "user@example.com",
-  "password": "yourpassword"
+  "success": true,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Yzg4MjVhNDliYmIzM2NjYmFiM2EyYyIsInVzZXJuYW1lIjoidmFpYmhhdiIsImlhdCI6MTY5MDg2MzQ5MCwiZXhwIjoxNjkwOTQ5ODkwfQ.GNoZoyDAD_6PSZEd72ltnDwVnJvcAMGAwEzl_jA"
 }
+```
 
+## To get started
 
-**Response when account is created:**
-
-````json
-{
-  "msg": "User logged in successfully",
-  "email": "user@example.com",
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NGJmYWJkMjJkMGQzODYxNTIzYjNlNmMiLCJ1c2VyRW1haWwiOiJha2FzaEBnbWFpbC5jb20iLCJpYXQiOjE2OTAyODMwMjgsImV4cCI6MTY5Mjg3NTAyOH0.z86CEgcmwJ2PVYJEw1SFPLBmCGDv8KqD6SO9uhc23U"
-}
-
-
-``````
+- Copy code to your local directory
+- Install the node modules
+- Create a '.env' file and add credentials 'MONGO_URI' and 'JWT_SECRET'
+- Run `npm start` command to start the application
+- And you're good to go.
